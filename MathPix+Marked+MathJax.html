@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mathpix Markdown Content</title>
+
+  <!-- marked.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- MathJax configuration — must come BEFORE the MathJax script -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        tags: 'ams',         // numbered equations support
+        packages: {'[+]': ['boldsymbol']}
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+        }
+      }
+    };
+  </script>
+
+  <!-- MathJax from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 2rem 1rem;
+    }
+
+    #rendered-output {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Typography ── */
+    #rendered-output h1,
+    #rendered-output h2,
+    #rendered-output h3,
+    #rendered-output h4,
+    #rendered-output h5,
+    #rendered-output h6 {
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      line-height: 1.25;
+      margin: 1.75rem 0 0.6rem;
+      color: #111;
+    }
+    #rendered-output h1 { font-size: 2rem; border-bottom: 2px solid #111; padding-bottom: 0.3rem; }
+    #rendered-output h2 { font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.2rem; }
+    #rendered-output h3 { font-size: 1.2rem; }
+    #rendered-output h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    #rendered-output p { margin: 0.9rem 0; }
+
+    /* ── Lists ── */
+    #rendered-output ul,
+    #rendered-output ol {
+      margin: 0.75rem 0 0.75rem 1.75rem;
+    }
+    #rendered-output li { margin: 0.3rem 0; }
+
+    /* ── Blockquote ── */
+    #rendered-output blockquote {
+      border-left: 4px solid #bbb;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      color: #555;
+      font-style: italic;
+      background: #f9f9f9;
+    }
+
+    /* ── Code ── */
+    #rendered-output code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      background: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      padding: 0.1em 0.35em;
+    }
+    #rendered-output pre {
+      background: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    #rendered-output pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0.88rem;
+    }
+
+    /* ── Tables ── */
+    #rendered-output table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    #rendered-output th,
+    #rendered-output td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    #rendered-output th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+    #rendered-output tr:nth-child(even) td { background: #fafafa; }
+
+    /* ── Horizontal Rule ── */
+    #rendered-output hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+
+    /* ── Links ── */
+    #rendered-output a {
+      color: #0057a8;
+      text-decoration: underline;
+    }
+    #rendered-output a:hover { color: #003d7a; }
+
+    /* ── Images ── */
+    #rendered-output img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+    }
+
+    /* ── MathJax display math spacing ── */
+    #rendered-output .MathJax_Display,
+    #rendered-output mjx-container[display="true"] {
+      margin: 1.25rem 0;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PASTE YOUR MATHPIX MARKDOWN BELOW (between the script tags).
+       Replace everything between the START and END comments.
+       Inline math:   $...$  or  \(...\)
+       Display math:  $$...$$  or  \[...\]
+       ============================================================ -->
+  <script type="text/plain" id="markdown-source">
+
+# ✏️ Paste your Mathpix Markdown here
+
+This is placeholder content. **Select everything between the two script tags** and replace it with your Markdown from Mathpix.
+
+## Inline math example
+
+Einstein's famous equation is $E = mc^2$, and the quadratic formula gives $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$.
+
+## Author footnotes example
+
+Michael Haenlein ${ }^{\mathbf{1}}$ and Andreas Kaplan ${ }^{\mathbf{2}}$
+
+## Display math example
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+## Everything else works as normal Markdown
+
+- **Bold**, *italic*, ~~strikethrough~~
+- `inline code` and fenced code blocks
+- > Blockquotes
+- Tables, links, images, horizontal rules
+
+---
+
+That's it! Save the file and paste into your Ultra HTML block.
+
+  </script>
+  <!-- ============================================================
+       END OF MARKDOWN PASTE ZONE
+       ============================================================ -->
+
+
+  <!-- Rendered output goes here — do not edit below this line -->
+  <div id="rendered-output"></div>
+
+  <script>
+    // Step 1: extract raw Markdown text
+    const raw = document.getElementById('markdown-source').textContent;
+
+    // Step 2: configure marked to NOT mangle underscores inside math
+    // (prevents marked from italicising things like a_i before MathJax sees them)
+    marked.setOptions({
+      mangle: false,
+      headerIds: false
+    });
+
+    // Step 3: protect math delimiters from marked's parser by temporarily
+    // replacing them with placeholders, then restoring after marked runs.
+    // This prevents marked from treating $x_1$ underscores as emphasis.
+    const mathChunks = [];
+
+    function stash(str) {
+      const key = `%%MATH_${mathChunks.length}%%`;
+      mathChunks.push(str);
+      return key;
+    }
+
+    const protected_md = raw
+      // display math $$ ... $$ (multiline)
+      .replace(/\$\$[\s\S]*?\$\$/g, match => stash(match))
+      // display math \[ ... \]
+      .replace(/\\\[[\s\S]*?\\\]/g, match => stash(match))
+      // inline math \( ... \)
+      .replace(/\\\([\s\S]*?\\\)/g, match => stash(match))
+      // inline math $ ... $ (single-line only, avoids runaway matches)
+      .replace(/\$[^\n$]+?\$/g, match => stash(match));
+
+    // Step 4: run marked on the protected Markdown
+    let html = marked.parse(protected_md);
+
+    // Step 5: restore the math chunks
+    mathChunks.forEach((math, i) => {
+      html = html.replace(`%%MATH_${i}%%`, math);
+    });
+
+    // Step 6: inject into the DOM
+    document.getElementById('rendered-output').innerHTML = html;
+
+    // Step 7: ask MathJax to typeset the newly added content
+    if (window.MathJax && MathJax.typesetPromise) {
+      MathJax.typesetPromise([document.getElementById('rendered-output')]);
+    } else {
+      // MathJax may still be loading — wait for it
+      document.getElementById('MathJax-script').addEventListener('load', () => {
+        MathJax.typesetPromise([document.getElementById('rendered-output')]);
+      });
+    }
+  </script>
+
+</body>
+</html>
