@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown Content</title>
+
+  <!-- marked.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <style>
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 2rem 1rem;
+    }
+
+    #rendered-output {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    /* ── Typography ── */
+    #rendered-output h1,
+    #rendered-output h2,
+    #rendered-output h3,
+    #rendered-output h4,
+    #rendered-output h5,
+    #rendered-output h6 {
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      line-height: 1.25;
+      margin: 1.75rem 0 0.6rem;
+      color: #111;
+    }
+    #rendered-output h1 { font-size: 2rem; border-bottom: 2px solid #111; padding-bottom: 0.3rem; }
+    #rendered-output h2 { font-size: 1.5rem; border-bottom: 1px solid #ddd; padding-bottom: 0.2rem; }
+    #rendered-output h3 { font-size: 1.2rem; }
+    #rendered-output h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
+
+    #rendered-output p { margin: 0.9rem 0; }
+
+    /* ── Lists ── */
+    #rendered-output ul,
+    #rendered-output ol {
+      margin: 0.75rem 0 0.75rem 1.75rem;
+    }
+    #rendered-output li { margin: 0.3rem 0; }
+
+    /* ── Blockquote ── */
+    #rendered-output blockquote {
+      border-left: 4px solid #bbb;
+      padding: 0.5rem 1rem;
+      margin: 1rem 0;
+      color: #555;
+      font-style: italic;
+      background: #f9f9f9;
+    }
+
+    /* ── Code ── */
+    #rendered-output code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      background: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 3px;
+      padding: 0.1em 0.35em;
+    }
+    #rendered-output pre {
+      background: #f3f3f3;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    #rendered-output pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0.88rem;
+    }
+
+    /* ── Tables ── */
+    #rendered-output table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    #rendered-output th,
+    #rendered-output td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    #rendered-output th {
+      background: #f0f0f0;
+      font-weight: bold;
+    }
+    #rendered-output tr:nth-child(even) td { background: #fafafa; }
+
+    /* ── Horizontal Rule ── */
+    #rendered-output hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+
+    /* ── Links ── */
+    #rendered-output a {
+      color: #0057a8;
+      text-decoration: underline;
+    }
+    #rendered-output a:hover { color: #003d7a; }
+
+    /* ── Images ── */
+    #rendered-output img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================================
+       PASTE YOUR MARKDOWN BELOW (between the script tags).
+       Replace everything between the START and END comments.
+       ============================================================ -->
+  <script type="text/plain" id="markdown-source">
+
+# ✏️ Paste your Markdown here
+
+This is placeholder content. **Select everything between the two script tags** and replace it with your Markdown from Mathpix (or anywhere else).
+
+## What you can use
+
+- Headings (H1–H6)
+- **Bold**, *italic*, ~~strikethrough~~
+- Ordered and unordered lists
+- `inline code` and fenced code blocks
+- > Blockquotes
+- Tables
+- [Links](https://example.com)
+- Images
+- Horizontal rules
+
+---
+
+That's it! Save the file and paste into your Ultra HTML block.
+
+  </script>
+  <!-- ============================================================
+       END OF MARKDOWN PASTE ZONE
+       ============================================================ -->
+
+
+  <!-- Rendered output goes here — do not edit below this line -->
+  <div id="rendered-output"></div>
+
+  <script>
+    const raw = document.getElementById('markdown-source').textContent;
+    document.getElementById('rendered-output').innerHTML = marked.parse(raw);
+  </script>
+
+</body>
+</html>
